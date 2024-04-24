@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Manipulation with JavaScript</title>
+</head>
+<body>
+    <img class="image" id="image_first" src="img/imagen1.jpg" hidden>
+    <p>cara</p>
+    <img class="image" id="image_second" src="img/imagen2.jpg" hidden>
+    <p>escudo</p>
+<script>
+    let image_visible;
+    switch ( Math.floor(Math.random() * 2) )
+    {
+    case 0:
+    image_visible = "#image_first";
+    break;  
+    case 1:
+    image_visible = "#image_second";
+    break;
+    }
+    document.querySelector(image_visible).removeAttribute("hidden");
+</script>
+    
+</body>
+</html>
